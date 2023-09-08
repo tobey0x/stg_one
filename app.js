@@ -12,11 +12,12 @@ app.get('/api', (req, res) => {
   const currentDate = new Date();
   const currentDay = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = currentDate.toISOString();
+  const formattedUtcTime = utcTime.split('.')[0] + "Z";
 
   const response = {
     slack_name,
     current_day: currentDay,
-    utc_time: utcTime,
+    utc_time: formattedUtcTime,
     track,
     github_file_url: "https://github.com/tobey0x/stg_one/blob/master/app.js",
     github_repo_url: "https://github.com/tobey0x/stg_one.git",

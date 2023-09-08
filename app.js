@@ -18,8 +18,8 @@ app.get('/api', (req, res) => {
     current_day: currentDay,
     utc_time: utcTime,
     track,
-    github_file_url: 'file url',
-    github_repo_url: 'repoUrl',
+    github_file_url: "https://github.com/tobey0x/stg_one/blob/master/app.js",
+    github_repo_url: "https://github.com/tobey0x/stg_one.git",
     status_code: 200,
   };
 
